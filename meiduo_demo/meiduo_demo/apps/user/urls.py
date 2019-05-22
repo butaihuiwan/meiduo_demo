@@ -9,5 +9,10 @@ urlpatterns = [
     url(r'^login/$', views.LoginView.as_view(), name='login'),
     url(r'^logout/$', views.LogoutView.as_view(), name='logout'),
     url(r'^info/$', views.UserCenterInfoView.as_view(), name='info'),
+    url(r'^emails/$', views.EmailView.as_view()),
+    # 验证邮箱
+    url(r'^emails/verification/$', views.VerifyEmailView.as_view()),
+    # 地址页面展示路由:
+    url(r'^addresses/$', views.AddressView.as_view(), name='address'),
 
 ]
